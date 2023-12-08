@@ -27,4 +27,15 @@ public class ValidacoesListaTests
 
         Assert.True(resultado);
     }
+
+    [Fact]
+    public void NaoDeveConterONumero10NaLista()
+    {
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var numero = 10;
+
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numero);
+
+        Assert.False(resultado);
+    }
 }
