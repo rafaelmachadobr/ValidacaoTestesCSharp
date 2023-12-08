@@ -27,4 +27,15 @@ public class ValidacoesStringTests
 
         Assert.True(resultado);
     }
+
+    [Fact]
+    public void NaoDeveConterAPalavraTesteNoTexto()
+    {
+        var texto = "Esse é um texto qualquer";
+        var textoProcurado = "teste";
+
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+
+        Assert.False(resultado);
+    }
 }
