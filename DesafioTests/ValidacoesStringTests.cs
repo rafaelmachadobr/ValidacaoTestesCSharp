@@ -38,4 +38,15 @@ public class ValidacoesStringTests
 
         Assert.False(resultado);
     }
+
+    [Fact]
+    public void TextoDeveTerminarComAPalavraProcurado()
+    {
+        var texto = "Começo, meio e fim do texto procurado";
+        var textoProcurado = "procurado";
+
+        var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
+
+        Assert.True(resultado);
+    }
 }
