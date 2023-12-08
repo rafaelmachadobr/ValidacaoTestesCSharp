@@ -16,4 +16,15 @@ public class ValidacoesStringTests
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Fact]
+    public void DeveContemAPalavraQualquerNoTexto()
+    {
+        var texto = "Esse é um texto qualquer";
+        var textoProcurado = "qualquer";
+
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+
+        Assert.True(resultado);
+    }
 }
