@@ -16,4 +16,15 @@ public class ValidacoesListaTests
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Fact]
+    public void DeveConterONumero9NaLista()
+    {
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var numero = 9;
+
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numero);
+
+        Assert.True(resultado);
+    }
 }
