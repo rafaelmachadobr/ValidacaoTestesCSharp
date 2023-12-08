@@ -59,4 +59,14 @@ public class ValidacoesListaTests
 
         Assert.Equal(9, resultado);
     }
+
+    [Fact]
+    public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
+    {
+        var lista = new List<int> { 5, -1, -8, 9 };
+
+        var resultado = _validacoes.RetornarMenorNumeroLista(lista);
+
+        Assert.Equal(-8, resultado);
+    }
 }
