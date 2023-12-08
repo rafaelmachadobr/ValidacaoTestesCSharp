@@ -49,4 +49,14 @@ public class ValidacoesListaTests
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Fact]
+    public void DeveRetornar9ComoMaiorNumeroDaLista()
+    {
+        var lista = new List<int> { 5, -1, -8, 9 };
+
+        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
+
+        Assert.Equal(9, resultado);
+    }
 }
